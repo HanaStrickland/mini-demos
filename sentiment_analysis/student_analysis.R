@@ -7,8 +7,10 @@ library(syuzhet)
 # Add some happy ones, angry ones - you name it!
 student_sentences <- c('I really like the pie you gave me this morning.', 
                        'Your shoes suck and are just plain ugly.',
-                       'I\'d really truly love going out in this weather!'
+                       'I\'d really truly love going out in this weather!',
+                       "The weather is horrible today."
                        )
 
 # Analyze sentiment for student sentences
-
+student_sentiment <- get_sentiment(student_sentences)
+student_analysis <- cbind(sentence = student_sentences, student_sentiment)
